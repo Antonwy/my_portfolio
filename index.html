@@ -21,9 +21,14 @@
                 <li id="aboutMeBTN" class="navListItem"><a>About me</a></li>
                 <li id="contactBTN" class="navListItem"><a>Contact</a></li>
             </ul>
+            <div class="menu-wrapper">
+                <div class="hamburger-menu"></div>	  
+            </div>
         </nav>
         <main class="mainContainer">
             <div class="circReveal"></div>
+            <div class="bg" id="bg1" style="opacity: 1"></div>
+            <div class="bg" id="bg2" style="opacity: 0"></div>
             <div class="home" style="display: 'flex'">
                 <h1>Hi! I'm Anton.</h1>
                 <p>I’m a german software developer!</p>
@@ -32,26 +37,30 @@
             <div class="myWork" style="display: none">
                 <h1>My Work:</h1>
                 <div class="workItems">
-                    <div class="workItem">
+                    <a target="_blank" href="http://159.69.117.200/#/dashboard" class="workItem">
                         <img src="./Images/FoodAssistant.png" width="100px" alt="image" class="workImage" />
                         <p>FoodAssistant</p>
-                    </div>
-                    <div class="workItem">
+                    </a>
+                    <a target="_blank" href="https://antonwy.github.io/todo-list/" class="workItem">
                         <img src="./Images/TodoList.png" width="100px" alt="image" class="workImage" />
                         <p>TodoList</p>
-                    </div>
-                    <div class="workItem">
+                    </a>
+                    <a target="_blank" href="https://antonwy.github.io/portfolio_website/" class="workItem">
                         <img src="./Images/PortfolioPage.png" width="100px" alt="image" class="workImage" />
                         <p>Portfolio</p>
-                    </div>
-                    <div class="workItem">
+                    </a>
+                    <a class="workItem" target="_blank" href="http://antonwy.bplaced.net/#">
+                        <img src="./Images/myApps.png" width="100px" alt="image" class="workImage" />
+                        <p>MyApps</p>
+                    </a>
+                    <a target="_blank" href="https://antonwy.github.io/takis_web/" class="workItem">
                         <img src="./Images/Takis.png" width="100px" alt="image" class="workImage" />
                         <p>Takis</p>
-                    </div>
-                    <div class="workItem">
+                    </a>
+                    <a target="_blank" href="" class="workItem">
                         <img src="./Images/WeatherForecast.png" width="100px" alt="image" class="workImage" />
                         <p>WeatherForecast</p>
-                    </div>
+                    </a>
                 </div>
             </div>
             <div class="aboutMe" style="display: none">
@@ -90,8 +99,6 @@
                     </li>
                 </ul>
             </div>
-            <div class="bg" id="bg1" style="opacity: 1"></div>
-            <div class="bg" id="bg2" style="opacity: 0"></div>
         </main>
     </div>
     <script src="/Assets/anime.min.js"></script>

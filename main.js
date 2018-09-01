@@ -1,19 +1,4 @@
 
-// NAVIGATION ITEM CLICK
-
-const navItems = document.getElementsByClassName('navListItem');
-
-function onNavChange(item){
-    [].forEach.call(navItems, li => {
-        if(li == item){
-            li.className = "navListItem itemActive";
-        }else{
-            li.className = "navListItem";
-        }
-    })
-}
-
-
 const learnMore = document.querySelector('.learnMore');
 const homeButton = document.querySelector('#homeBTN');
 const aboutMeButton = document.querySelector('#aboutMeBTN');
@@ -36,7 +21,31 @@ const bg2 = document.querySelector('#bg2');
 let currentPage = home;
 
 
+const navItems = document.getElementsByClassName('navListItem');
+const menuBTN = document.querySelector('.menu-wrapper');
+
+function onNavChange(item){
+    [].forEach.call(navItems, li => {
+        if(li == item){
+            li.className = "navListItem itemActive";
+        }else{
+            li.className = "navListItem";
+        }
+    })
+}
+
+
 const changePage = (item) => () => {
+    if(item.page !== currentPage){
+        onNavChange(item.button)
+        if(window.innerWidth < 950) toggleMenu();
+        circularReveal(item.page, currentPage, item.colors, item.img);
+        currentPage = item.page;
+    }
+    
+}
+
+const learnMoreAnim = (item) => () => {
     if(item.page !== currentPage){
         onNavChange(item.button)
         circularReveal(item.page, currentPage, item.colors, item.img);
@@ -107,7 +116,7 @@ const circularReveal = (targetIn, targetOut, colors, img) => {
         targets: circReveal,
         width: [0, "200%"],
         height: [0, "200%"],
-        easing: 'easeInQuad',
+        easing: 'easeInOutSine',
         duration: 500,
         backgroundColor: [colors.start, colors.end],
         opacity: {
@@ -166,11 +175,34 @@ const states = {
     },
 }
 
-learnMore.addEventListener('click', changePage(states.aboutMe));
+let menuVisible = false;
+
+const toggleMenu = () => {
+    document.querySelector('.hamburger-menu').classList.toggle('animate')
+    let navLinks = document.querySelector('.navLinks');
+    anime({
+        targets: navLinks,
+        height: menuVisible ? "0" : "250px",
+        duration: 250,
+        easing: 'easeInOutSine',
+        begin: () => {
+            navLinks.style.display = "block";
+        },
+        complete: () => {
+            menuVisible = !menuVisible;
+            if(!menuVisible){
+                navLinks.style.display = "none";
+            }
+        }
+    })
+}
+
+learnMore.addEventListener('click', learnMoreAnim(states.aboutMe, true));
 aboutMeButton.addEventListener('click', changePage(states.aboutMe));
 homeButton.addEventListener('click', changePage(states.home));
 myWorkButton.addEventListener('click', changePage(states.myWork));
 contactButton.addEventListener('click', changePage(states.contact));
+menuBTN.addEventListener('click', toggleMenu);
 
 
 
