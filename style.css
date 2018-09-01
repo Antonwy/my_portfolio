@@ -51,8 +51,7 @@ body {
     width: 70px;
     height: 70px;
     background-color: white;
-    border-radius: 35px;
-    box-shadow: 0 3px 6px 0px #4040403b;
+    border-radius: 35px; 
     background-image: url(./Images/profileImage.jpg);
     background-size: cover;
     transform: rotate(90deg);
