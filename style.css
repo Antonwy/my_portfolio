@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(120deg, #f5576c 0%, #f093fb 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardContainer {
+    width: 90vw;
+    height: 90vh;
+    position: relative;
+    box-shadow: 0 5px 10px 0px #4040403b;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    background: white;
+}
+
+
+
+.navBar {
+    background-color: #EDF2FC;
+    border-radius: 5px 0 0 5px;
+    display: grid;
+    grid-auto-rows: 30% 70%;
+}
+
+.avatarContainer{
+    display: grid;
+    grid-template-rows: 70% 30%;
+    text-align: center;
+}
+
+.avatar {
+    margin: auto;
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border-radius: 35px;
+    box-shadow: 0 3px 6px 0px #4040403b;
+    background-image: url(./Images/profileImage.jpg);
+    background-size: cover;
+    transform: rotate(90deg);
+    background-position: center;
+}
+
+.avatarContainer p {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.navLinks {
+    list-style: none;
+    margin-top: 50px;
+    z-index: 2;
+}
+
+.navListItem{
+    background: transparent;
+    cursor: pointer;
+    transition: background .5s ease;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.navListItem:before{
+    position: absolute;
+    content: " ";
+    width: 0%;
+    height: 100%;
+    background: rgba(255, 255, 255, .6);
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: width .4s;
+    cursor: pointer;
+}
+
+.navListItem:hover::before{
+    width: 100%;
+}
+
+.itemActive{
+    background: white;
+}
+
+.mainContainer {
+    padding: 50px;
+    padding-top: 0;
+    padding-left: 10%;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg {
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url(./Images/pageStyles/homeStyle.svg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 70%;
+    z-index: 20;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.home {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 1;
+}
+
+.home h1 {
+    font-size: 4em;
+    margin-bottom: 50px;
+}
+
+.learnMore {
+    margin: 50px 0;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background: #7670FD;
+    box-shadow: 0 3px 6px 0px #5D58E2;
+    transition: box-shadow .25s;
+    cursor: pointer;
+}
+
+.learnMore:hover {
+    box-shadow: 0 0 0 0;
+}
+
+.learnMore:focus{
+    outline: none;
+}
+
+.aboutMe {
+    display: none;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.aboutMe h1 {
+    margin-bottom: 30px;
+}
+
+.myWork {
+    display: none;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.myWork h1 {
+    margin-left: 20px;
+}
+
+.workItems {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.workItem {
+    margin: 20px;
+    text-align: center;
+    background: #EDF2FC;
+    padding: 10px;
+    border-radius: 7px;
+    box-shadow: 0 3px 5px 0px #4040401c;
+    transition: all .4s;
+}
+
+.workItem:hover {
+    background: rgba(119, 112, 253, 0.274);
+    box-shadow: 0 6px 10px 0px #4040401c;
+}
+ 
+.workItem p {
+    margin-top: 10px;
+}
+
+.workImage {
+    width: 200px;
+}
+
+.contact {
+    display: none;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact h1 {
+    margin-bottom: 20px;
+}
+
+.contactList {
+    list-style-type: none;
+}
+
+.contactItem {
+    display: flex;
+    width: 300px;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 0px;
+    padding: 10px;
+    border-radius: 5px;
+    background: #EDF2FC;
+    box-shadow: 0 3px 5px 0px #4040401c;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+.contactItem:hover {
+    background: rgba(119, 112, 253, 0.274);
+    box-shadow: 0 6px 10px 0px #4040401c;
+}
+
+.contactItem p {
+    margin-left: 20px;
+}
+
+.circReveal {
+    pointer-events: none;
+    position: absolute;
+    left: -50%;
+    bottom: -50%;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    z-index: 19;
+}

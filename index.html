@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Anton Wyrowski</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+<body>
+    <div class="cardContainer">
+        <nav class="navBar">
+            <div class="avatarContainer">
+                <div class="avatar"></div>
+                <p>Anton Wyrowski</p>
+            </div>
+            <ul class="navLinks">
+                <li id="homeBTN" class="navListItem itemActive"><a>Home</a></li>
+                <li id="myWorkBTN" class="navListItem"><a>My work</a></li>
+                <li id="aboutMeBTN" class="navListItem"><a>About me</a></li>
+                <li id="contactBTN" class="navListItem"><a>Contact</a></li>
+            </ul>
+        </nav>
+        <main class="mainContainer">
+            <div class="circReveal"></div>
+            <div class="home" style="display: 'flex'">
+                <h1>Hi! I'm Anton.</h1>
+                <p>I’m a german software developer!</p>
+                <div><button class="learnMore">Learn more</button></div>
+            </div>
+            <div class="myWork" style="display: none">
+                <h1>My Work:</h1>
+                <div class="workItems">
+                    <div class="workItem">
+                        <img src="./Images/FoodAssistant.png" width="100px" alt="image" class="workImage" />
+                        <p>FoodAssistant</p>
+                    </div>
+                    <div class="workItem">
+                        <img src="./Images/TodoList.png" width="100px" alt="image" class="workImage" />
+                        <p>TodoList</p>
+                    </div>
+                    <div class="workItem">
+                        <img src="./Images/PortfolioPage.png" width="100px" alt="image" class="workImage" />
+                        <p>Portfolio</p>
+                    </div>
+                    <div class="workItem">
+                        <img src="./Images/Takis.png" width="100px" alt="image" class="workImage" />
+                        <p>Takis</p>
+                    </div>
+                    <div class="workItem">
+                        <img src="./Images/WeatherForecast.png" width="100px" alt="image" class="workImage" />
+                        <p>WeatherForecast</p>
+                    </div>
+                </div>
+            </div>
+            <div class="aboutMe" style="display: none">
+                <h1>About me</h1>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
+                        labore et dolore magna aliquyam erat, sed diam voluptua. 
+                        At vero eos et accusam et justo duo dolores et ea rebum. 
+                        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
+                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
+                        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+                </p>
+            </div>
+            <div class="contact" style="display: none">
+                <h1>Contact</h1>
+                <ul class="contactList">
+                    <li class="contactItem">
+                        <img src="./Images/facebook.svg" class="socialImg" />
+                        <p class="socialName">Anton Wyrowski</p>
+                    </li>
+                    <li class="contactItem">
+                        <img src="./Images/instagram.svg" class="socialImg" />
+                        <p class="socialName">antonwyr</p>
+                    </li>
+                    <li class="contactItem">
+                        <img src="./Images/github.svg" class="socialImg" />
+                        <p class="socialName">Antonwy</p>
+                    </li>
+                    <li class="contactItem">
+                        <img src="./Images/twitter.svg" class="socialImg" />
+                        <p class="socialName">antonwyro</p>
+                    </li>
+                    <li class="contactItem">
+                        <img src="./Images/gmail.svg" class="socialImg" />
+                        <p class="socialName">anton.wyrowski@gmail.com</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg" id="bg1" style="opacity: 1"></div>
+            <div class="bg" id="bg2" style="opacity: 0"></div>
+        </main>
+    </div>
+    <script src="/Assets/anime.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
