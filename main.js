@@ -1,4 +1,4 @@
-
+g
 const learnMore = document.querySelector('.learnMore');
 const homeButton = document.querySelector('#homeBTN');
 const aboutMeButton = document.querySelector('#aboutMeBTN');
